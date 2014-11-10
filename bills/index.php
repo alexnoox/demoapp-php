@@ -25,7 +25,7 @@ $bills = Maestrano_Account_Bill::all();
 
         <? if ($_SESSION["loggedIn"]) { ?>
           <li><a href="/bills">Bills</a></li>
-          <li><a href="/logout">Logout</a></li>
+          <li><a href="/logout.php">Logout</a></li>
         <? } ?>
       </ul>
 		</div>
