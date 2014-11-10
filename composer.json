@@ -1,0 +1,5 @@
+{
+  "require": {
+    "maestrano-php": ">=0.3",
+  },
+}
