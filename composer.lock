@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "66083c666a224955b34a9b17a008f7f7",
+    "hash": "abe01c62ca7f57553dd70dec527fe8ea",
     "packages": [
         {
             "name": "maestrano/maestrano-php",
@@ -64,9 +64,9 @@
     "stability-flags": [
 
     ],
-    "platform": [
-
-    ],
+    "platform": {
+        "ext-mbstring": "*"
+    },
     "platform-dev": [
 
     ]
