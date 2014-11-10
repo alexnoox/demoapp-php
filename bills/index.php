@@ -34,7 +34,7 @@ $bills = Maestrano_Account_Bill::all();
 	<div class="container" style="margin-top: 60px;">
 		<div class="row">
 			<div class="span12" style="text-align: center;">
-				<? if (!$_SESSION["loggedIn"]) { ?>
+				<? if (false && !$_SESSION["loggedIn"]) { ?>
 				<p class="text-error">
 					You need to be logged in to see your Maestrano bills
 				</p>
@@ -57,7 +57,7 @@ $bills = Maestrano_Account_Bill::all();
 							<td><?= $bill->getDescription() ?></td>
 							<td><?= $bill->getPriceCents() ?></td>
 							<td><?= $bill->getCurrency() ?></td>
-							<td><?= $bill->getCreatedAt() ?></td>
+							<td><?= $bill->getCreatedAt()->format(DateTime::ISO8601) ?></td>
 						</tr>
 						<? } ?>
 					</tbody>
