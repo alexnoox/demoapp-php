@@ -1,5 +1,5 @@
 <?php
-require_once '../../../init.php';
+require_once '../init.php';
 session_start();
 
 $bills = Maestrano_Account_Bill::all();
