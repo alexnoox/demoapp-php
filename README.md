@@ -1,4 +1,5 @@
-demoapp-php
-===========
+# Maestrano PHP DemoApp
 
-Demo Application using Maestrano PHP API
+This application shows examples of how to use the Maestrano PHP API. A live version of this application is available at this address:
+
+http://php-demoapp.maestrano.io
