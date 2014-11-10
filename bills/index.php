@@ -2,7 +2,22 @@
 require_once '../init.php';
 session_start();
 
-$bills = Maestrano_Account_Bill::all();
+$bills = []
+
+// Handle action when user is logged in
+if ($_SESSION["loggedIn"]) {
+  $mnoSession = new Maestrano_Sso_Session($_SESSION);
+  
+  // Check session validity and trigger SSO if not
+  if (!$mnoSession->isValid()) {
+    header('Location: ' . Maestrano::sso()->getInitUrl());
+  }
+  
+  // Retrieve all related to the user group
+  $bills = Maestrano_Account_Bill::all(array('groupId' => $_SESSION['groupId']));
+}
+
+
 ?>
 
 <html>

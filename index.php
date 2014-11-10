@@ -2,6 +2,16 @@
 require_once 'init.php';
 session_start();
 
+// Handle action when user is logged in
+if ($_SESSION["loggedIn"]) {
+  $mnoSession = new Maestrano_Sso_Session($_SESSION);
+  
+  // Check session validity and trigger SSO if not
+  if (!$mnoSession->isValid()) {
+    header('Location: ' . Maestrano::sso()->getInitUrl());
+  }
+}
+
 ?>
 
 <html>

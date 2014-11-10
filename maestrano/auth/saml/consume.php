@@ -33,6 +33,13 @@
     $_SESSION["groupName"] = $group->getName();
     $_SESSION["groupId"] = $group->getId();
     
+    
+    // Once the user is created/identified, we store the maestrano
+    // session. This session will be used for single logout
+    $mnoSession = new Maestrano_Sso_Session($resp,$user);
+    $mnoSession->save();
+    
+    
     // Redirect the user to home page
     header('Location: /');
     
