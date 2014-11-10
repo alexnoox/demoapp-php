@@ -1,6 +1,8 @@
 <?php
 require_once '../../../init.php';
 session_start();
+
+$bills = Maestrano_Account_Bill::all();
 ?>
 
 <html>
@@ -31,23 +33,38 @@ session_start();
 
 	<div class="container" style="margin-top: 60px;">
 		<div class="row">
-      <div class="span8 offset2" style="text-align: center;">
-        <? if ($_SESSION["loggedIn"]) { ?>
-        <h4>
-          Hello
-          <?= $_SESSION["firstName"] ?>
-          <?= $_SESSION["lastName"] ?>
-        </h4>
-        <br />
-        <p>
-          You logged in via group <b><?= $_SESSION["groupName"] ?></b>
-        </p>
-        <? } else { ?>
-        <a class="btn btn-large"
-          href="<?php Maestrano::sso()->getInitPath() ?>">Login</a>
-        <? } ?>
-      </div>
-    </div>
+			<div class="span12" style="text-align: center;">
+				<? if (!$_SESSION["loggedIn"]) { ?>
+				<p class="text-error">
+					You need to be logged in to see your Maestrano bills
+				</p>
+				<? } else { ?>
+				<p>Below are the bills related to the group: <?= $_SESSION["groupName"] ?></p>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>UID</th>
+							<th>Description</th>
+							<th>Price (cents)</th>
+							<th>Currency</th>
+							<th>Created At</th>
+						</tr>
+					</thead>
+					<tbody>
+						<? foreach ($bills as $bill) { ?>
+						<tr>
+							<td><?= $bill->getId() ?></td>
+							<td><?= $bill->getDescription() ?></td>
+							<td><?= $bill->getPriceCents() ?></td>
+							<td><?= $bill->getCurrency() ?></td>
+							<td><?= $bill->getCreatedAt() ?></td>
+						</tr>
+						<? } ?>
+					</tbody>
+				</table>
+				<? } ?>
+			</div>
+		</div>
 	</div>
 	</div>
 
