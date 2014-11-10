@@ -1,7 +1,7 @@
 {
   "environment": "test",
   "app": {
-    "host": "https://pure-ridge-9526.herokuapp.com"
+    "host": "http://php-demoapp.maestrano.io"
   },
   "api": {
     "id": "app-1",
