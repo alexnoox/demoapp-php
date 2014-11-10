@@ -36,7 +36,7 @@
     
     // Once the user is created/identified, we store the maestrano
     // session. This session will be used for single logout
-    $mnoSession = new Maestrano_Sso_Session($resp,$user);
+    $mnoSession = new Maestrano_Sso_Session($_SESSION,$user);
     $mnoSession->save();
     
     
