@@ -2,8 +2,8 @@
   "environment": "test",
   "app": {
     "host": "https://pure-ridge-9526.herokuapp.com"
-  }
-  "api" {
+  },
+  "api": {
     "id": "app-1",
     "key": "gfcmbu8269wyi0hjazk4t7o1sndpvrqxl53e1"
   }

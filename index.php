@@ -1,6 +1,7 @@
 <?php
 require_once 'init.php';
 session_start();
+
 ?>
 
 <html>
@@ -44,7 +45,7 @@ session_start();
         </p>
         <? } else { ?>
         <a class="btn btn-large"
-          href="<?php Maestrano::sso()->getInitPath() ?>">Login</a>
+          href="<?= Maestrano::sso()->getInitPath() ?>">Login</a>
         <? } ?>
       </div>
     </div>
