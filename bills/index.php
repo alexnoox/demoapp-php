@@ -2,7 +2,7 @@
 require_once '../init.php';
 session_start();
 
-$bills = []
+$bills = [];
 
 // Handle action when user is logged in
 if ($_SESSION["loggedIn"]) {
@@ -10,7 +10,7 @@ if ($_SESSION["loggedIn"]) {
   
   // Check session validity and trigger SSO if not
   if (!$mnoSession->isValid()) {
-    header('Location: ' . Maestrano::sso()->getInitUrl());
+    header('Location: ' . Maestrano::sso()->getInitPath());
   }
   
   // Retrieve all related to the user group

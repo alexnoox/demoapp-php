@@ -8,7 +8,7 @@ if ($_SESSION["loggedIn"]) {
   
   // Check session validity and trigger SSO if not
   if (!$mnoSession->isValid()) {
-    header('Location: ' . Maestrano::sso()->getInitUrl());
+    header('Location: ' . Maestrano::sso()->getInitPath());
   }
 }
 
