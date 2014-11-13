@@ -1,7 +1,7 @@
 {
   "environment": "test",
   "app": {
-    "host": "http://localhost:8888"
+    "host": "http://php-demoapp.maestrano.io"
   },
   "api": {
     "id": "app-1",
