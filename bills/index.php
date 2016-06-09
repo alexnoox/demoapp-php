@@ -13,7 +13,7 @@ if ($_SESSION["loggedIn"]) {
     header('Location: ' . Maestrano::sso()->getInitPath());
   }
   
-  // Retrieve all related to the user group
+  // Retrieve all bills related to the user group
   $bills = Maestrano_Account_Bill::all(array('groupId' => $_SESSION['groupId']));
 }
 

@@ -1,22 +1,24 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "8f7a1f00d31007d620ce42eb1c75429e",
+    "hash": "bd31023b99a5991462d10b6e6886f14c",
+    "content-hash": "96c7196338601697d42ae3c4e347cc5a",
     "packages": [
         {
             "name": "maestrano/maestrano-php",
-            "version": "0.5.0",
+            "version": "0.11.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maestrano/maestrano-php.git",
-                "reference": "20a7ae3971adf3895f89f57261e8bf9b01da16f9"
+                "reference": "ffe743e34a2a2f38421dbcb5e8662b73daf747cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/20a7ae3971adf3895f89f57261e8bf9b01da16f9",
-                "reference": "20a7ae3971adf3895f89f57261e8bf9b01da16f9",
+                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/ffe743e34a2a2f38421dbcb5e8662b73daf747cb",
+                "reference": "ffe743e34a2a2f38421dbcb5e8662b73daf747cb",
                 "shasum": ""
             },
             "require": {
@@ -51,23 +53,17 @@
                 "marketplace",
                 "sme"
             ],
-            "time": "2014-11-11 01:53:18"
+            "time": "2016-02-11 06:07:38"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "ext-mbstring": "*"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
