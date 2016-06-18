@@ -1,6 +1,7 @@
 {
   "require": {
     "ext-mbstring": "*",
+    "nategood/httpful": "*",
     "maestrano/maestrano-php": "0.11.5"
   }
 }
