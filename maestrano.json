@@ -6,10 +6,5 @@
   "api": {
     "id": "app-119",
     "key": "vu1pasjl6z7t34df0y895hbkogcq2wixmren119"
-  },
-  "dev_platform": {
-    "host": "http://localhost:5000",
-    "api_key": "5e351c6a-b385-425d-b7d2-baadb22f9476",
-    "api_secret": "SFHrk0XVRZXfQS9hO8stYA"
   }
 }
