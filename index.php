@@ -47,11 +47,12 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
                     </h4>
                     <br/>
                     <p>
-                        You logged in via group <b><?= $_SESSION["groupName"] ?></b>
+                        You logged in via group <b><?= $_SESSION["groupName"] ?></b> on marketplace <b><?= $_SESSION["marketplace"] ?></b>
                     </p>
                 <? else: ?>
-                    <a class="btn btn-large"
-                       href="<?= Maestrano::sso()->getInitPath() ?>">Login</a>
+                    <? foreach (Maestrano::getMarketplacesList() as $name): ?>
+                        <a class="btn btn-large" href="<?= Maestrano::with($name)->sso()->getInitPath() . "?tenant=$name"  ?>">Login (<?= $name ?>)</a>
+                    <? endforeach ?>
                 <? endif ?>
             </div>
         </div>

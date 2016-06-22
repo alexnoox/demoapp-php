@@ -7,5 +7,3 @@
   } else {
     echo "Sorry! I'm not giving you my API metadata";
   }
-  
-?>
