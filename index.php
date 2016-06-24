@@ -51,7 +51,7 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
                     </p>
                 <? else: ?>
                     <? foreach (Maestrano::getMarketplacesList() as $name): ?>
-                        <a class="btn btn-large" href="<?= Maestrano::with($name)->sso()->getInitPath() . "?tenant=$name"  ?>">Login (<?= $name ?>)</a>
+                        <a class="btn btn-large" href="<?= Maestrano::with($name)->sso()->getInitPath() . "?marketplace=$name"  ?>">Login (<?= $name ?>)</a>
                     <? endforeach ?>
                 <? endif ?>
             </div>
