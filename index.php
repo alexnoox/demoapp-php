@@ -29,17 +29,17 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
             <a class="brand" href="/">DemoApp</a>
             <ul class="nav">
                 <li><a href="/">Home</a></li>
-                <? if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']): ?>
+                <?php if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']): ?>
                   <li><a href="/bills">Bills</a></li>
                   <li><a href="/logout.php">Logout</a></li>
-                <? endif ?>
+                <?php endif ?>
             </ul>
 		</div>
 	</div>
     <div class="container" style="margin-top: 60px;">
         <div class="row">
             <div class="span8 offset2" style="text-align: center;">
-                <? if (array_key_exists('loggedIn', $_SESSION) && $_SESSION["loggedIn"]): ?>
+                <?php if (array_key_exists('loggedIn', $_SESSION) && $_SESSION["loggedIn"]): ?>
                     <h4>
                         Hello
                         <?= $_SESSION["firstName"] ?>
@@ -49,11 +49,11 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
                     <p>
                         You logged in via group <b><?= $_SESSION["groupName"] ?></b> on marketplace <b><?= $_SESSION["marketplace"] ?></b>
                     </p>
-                <? else: ?>
-                    <? foreach (Maestrano::getMarketplacesList() as $name): ?>
-                        <a class="btn btn-large" href="<?= Maestrano::with($name)->sso()->getInitPath() . "?marketplace=$name"  ?>">Login (<?= $name ?>)</a>
-                    <? endforeach ?>
-                <? endif ?>
+                <?php else: ?>
+                    <?php foreach (Maestrano::getMarketplacesList() as $name): ?>
+                        <a class="btn btn-large" href="<?= Maestrano::with($name)->sso()->getInitPath() ?>">Login (<?= $name ?>)</a>
+                    <?php endforeach ?>
+                <?php endif ?>
             </div>
         </div>
     </div>

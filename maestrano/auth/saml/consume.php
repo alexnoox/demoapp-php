@@ -2,9 +2,11 @@
   session_start();
   require_once '../../../init.php';
 
+  $marketplace = $_GET['marketplace'];
+
   // Build SSO Response using SAMLResponse parameter value sent via
   // POST request
-  $resp = new Maestrano_Saml_Response($_POST['SAMLResponse']);
+  $resp = Maestrano_Saml_Response::with($marketplace)->new($_POST['SAMLResponse']);
 
   if ($resp->isValid()) {
     // Get the user as well as the user group
