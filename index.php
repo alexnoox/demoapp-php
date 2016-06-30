@@ -4,12 +4,13 @@ require_once 'init.php';
 
 // Handle action when user is logged in
 if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
-  $mnoSession = new Maestrano_Sso_Session($_SESSION);
-  
-  // Check session validity and trigger SSO if not
-  if (!$mnoSession->isValid()) {
-    header('Location: ' . Maestrano::sso()->getInitPath());
-  }
+    // Get the current session
+    $mnoSession = Maestrano_Sso_Session::with($_SESSION['marketplace'])->new($_SESSION);
+
+    // Check session validity and trigger SSO if not
+    if (!$mnoSession->isValid()) {
+        header('Location: ' . Maestrano::sso()->getInitPath());
+    }
 }
 ?>
 
