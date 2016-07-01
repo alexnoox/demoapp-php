@@ -1,11 +1,11 @@
 {
-  "environment": "local",
   "dev-platform": {
     "host": "http://localhost:5000",
-    "v1_path": "/api/config/v1/environments"
+    "v1_path": "/api/config/v1/marketplaces"
   },
-  "app": {
-    "api_key": "5e351c6a-b385-425d-b7d2-baadb22f9476",
-    "api_secret": "SFHrk0XVRZXfQS9hO8stYA"
+  "environment": {
+    "name": "local",
+    "api_key": "22680bcd-5f0f-4e08-805e-28f1892ea046",
+    "api_secret": "P9tBxTrEhxXv0b_NxJSEiQ"
   }
 }
