@@ -5,7 +5,7 @@
   },
   "environment": {
     "name": "local",
-    "api_key": "22680bcd-5f0f-4e08-805e-28f1892ea046",
-    "api_secret": "P9tBxTrEhxXv0b_NxJSEiQ"
+    "api_key": "<Environment API key>",
+    "api_secret": "<Environment API secret>"
   }
 }
