@@ -4,16 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a501e047ec3b2e0ce8ee4c11ede0bc00",
-    "content-hash": "f6e2397bd5de5cff24877704b7e4413c",
+    "hash": "088ff304d20e8cea82d74f52b1102c55",
+    "content-hash": "35138dc7a7c4f1d4bb0a5d03e66f8d36",
     "packages": [
         {
             "name": "maestrano/maestrano-php",
-            "version": "dev-master",
+            "version": "1.0.0-RC1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/alexnoox/maestrano-php",
-                "reference": "e8473368256ff7721f3db6ac7b8f1562b8dc3a6b"
+                "url": "https://github.com/maestrano/maestrano-php.git",
+                "reference": "92892352f9723ad85fee9eb10151a8ffb9d8a9d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/92892352f9723ad85fee9eb10151a8ffb9d8a9d0",
+                "reference": "92892352f9723ad85fee9eb10151a8ffb9d8a9d0",
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -23,7 +29,7 @@
                 "php": ">=5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.3.*"
+                "phpunit/phpunit": "4.8.*"
             },
             "type": "library",
             "autoload": {
@@ -31,6 +37,7 @@
                     "lib/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -47,7 +54,7 @@
                 "marketplace",
                 "sme"
             ],
-            "time": "2016-06-21 04:38:39"
+            "time": "2016-07-05 03:16:49"
         },
         {
             "name": "nategood/httpful",
@@ -104,7 +111,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "maestrano/maestrano-php": 20
+        "maestrano/maestrano-php": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,
