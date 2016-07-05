@@ -1,12 +1,6 @@
 {
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/alexnoox/maestrano-php"
-    }
-  ],
   "require": {
     "ext-mbstring": "*",
-    "maestrano/maestrano-php": "dev-master"
+    "maestrano/maestrano-php": "1.0.0-RC1"
   }
 }
