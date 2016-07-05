@@ -1,37 +1,40 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "8f7a1f00d31007d620ce42eb1c75429e",
+    "hash": "088ff304d20e8cea82d74f52b1102c55",
+    "content-hash": "35138dc7a7c4f1d4bb0a5d03e66f8d36",
     "packages": [
         {
             "name": "maestrano/maestrano-php",
-            "version": "0.5.0",
+            "version": "1.0.0-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maestrano/maestrano-php.git",
-                "reference": "20a7ae3971adf3895f89f57261e8bf9b01da16f9"
+                "reference": "92892352f9723ad85fee9eb10151a8ffb9d8a9d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/20a7ae3971adf3895f89f57261e8bf9b01da16f9",
-                "reference": "20a7ae3971adf3895f89f57261e8bf9b01da16f9",
+                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/92892352f9723ad85fee9eb10151a8ffb9d8a9d0",
+                "reference": "92892352f9723ad85fee9eb10151a8ffb9d8a9d0",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": ">=5.2"
+                "nategood/httpful": "*",
+                "php": ">=5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.3.*"
+                "phpunit/phpunit": "4.8.*"
             },
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "lib/Maestrano/"
+                    "lib/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -51,23 +54,69 @@
                 "marketplace",
                 "sme"
             ],
-            "time": "2014-11-11 01:53:18"
+            "time": "2016-07-05 03:16:49"
+        },
+        {
+            "name": "nategood/httpful",
+            "version": "0.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nategood/httpful.git",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nategood/httpful/zipball/c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Httpful": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nate Good",
+                    "email": "me@nategood.com",
+                    "homepage": "http://nategood.com"
+                }
+            ],
+            "description": "A Readable, Chainable, REST friendly, PHP HTTP Client",
+            "homepage": "http://github.com/nategood/httpful",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "requests",
+                "rest",
+                "restful"
+            ],
+            "time": "2015-10-26 16:11:30"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "maestrano/maestrano-php": 5
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "ext-mbstring": "*"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

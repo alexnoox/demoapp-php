@@ -1,10 +1,10 @@
 {
   "environment": "test",
   "app": {
-    "host": "http://php-demoapp.maestrano.io"
+    "host": "http://php-demoapp.maestrano.dev"
   },
   "api": {
-    "id": "app-1",
-    "key": "gfcmbu8269wyi0hjazk4t7o1sndpvrqxl53e1"
+    "id": "app-119",
+    "key": "vu1pasjl6z7t34df0y895hbkogcq2wixmren119"
   }
 }

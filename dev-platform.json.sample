@@ -1,0 +1,11 @@
+{
+  "dev-platform": {
+    "host": "http://localhost:5000",
+    "v1_path": "/api/config/v1/marketplaces"
+  },
+  "environment": {
+    "name": "local",
+    "api_key": "<Environment API key>",
+    "api_secret": "<Environment API secret>"
+  }
+}
