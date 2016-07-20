@@ -1,6 +1,6 @@
 {
   "require": {
     "ext-mbstring": "*",
-    "maestrano/maestrano-php": "1.0.0-RC1"
+    "maestrano/maestrano-php": "1.0.0-RC2"
   }
 }
