@@ -1,7 +1,7 @@
 {
   "dev-platform": {
-    "host": "http://localhost:5000",
-    "v1_path": "/api/config/v1/marketplaces"
+    "host": "https://dev-platform.maestrano.io",
+    "api_path": "/api/config/v1/"
   },
   "environment": {
     "name": "local",
