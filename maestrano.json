@@ -4,7 +4,7 @@
     "host": "http://php-demoapp.maestrano.dev"
   },
   "api": {
-    "id": "app-119",
-    "key": "vu1pasjl6z7t34df0y895hbkogcq2wixmren119"
+    "id": "<Your Environment Key>",
+    "key": "<Your Environment Secret>"
   }
 }
