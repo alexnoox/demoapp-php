@@ -51,9 +51,14 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
                         You logged in via group <b><?= $_SESSION["groupName"] ?></b> on marketplace <b><?= $_SESSION["marketplace"] ?></b>
                     </p>
                 <?php else: ?>
-                    <?php foreach (Maestrano::getMarketplacesList() as $name): ?>
-                        <a class="btn btn-large" href="<?= Maestrano::with($name)->sso()->getInitPath() ?>">Login (<?= $name ?>)</a>
-                    <?php endforeach ?>
+                    <h3>Sandbox</h3>
+                    Please go to <a href="http://sandbox.maestrano.com">http://sandbox.maestrano.com</a> to test this application.
+                    <?php if (!empty(Maestrano::getMarketplacesList())): ?>
+                        <h3>Discovered Marketplaces</h3>
+                        <?php foreach (Maestrano::getMarketplacesList() as $name): ?>
+                            <a href="<?= Maestrano::with($name)->sso()->getHost() ?>"><h4><?= $name ?></h4></a>
+                        <?php endforeach ?>
+                    <?php endif ?>
                 <?php endif ?>
             </div>
         </div>
