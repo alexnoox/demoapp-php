@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ce42b169ee445b8282378fe1a5527ba9",
-    "content-hash": "c54afc30256d742adb0b5fabdaf17886",
+    "hash": "e66d14375b5e79fca87828d09d68d5bc",
+    "content-hash": "c3a0dea9d307438c0195c899c00842d3",
     "packages": [
         {
             "name": "maestrano/maestrano-php",
-            "version": "1.0.0-RC3",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maestrano/maestrano-php.git",
-                "reference": "a0ef4950ea8cab80ef5fc478fc462f72e9ccdb41"
+                "reference": "b2246ec08848cf53088c1c0660d173c7cc4a76a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/a0ef4950ea8cab80ef5fc478fc462f72e9ccdb41",
-                "reference": "a0ef4950ea8cab80ef5fc478fc462f72e9ccdb41",
+                "url": "https://api.github.com/repos/maestrano/maestrano-php/zipball/b2246ec08848cf53088c1c0660d173c7cc4a76a9",
+                "reference": "b2246ec08848cf53088c1c0660d173c7cc4a76a9",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "marketplace",
                 "sme"
             ],
-            "time": "2016-08-31 03:51:20"
+            "time": "2017-01-08 23:24:48"
         },
         {
             "name": "nategood/httpful",
@@ -110,9 +110,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "maestrano/maestrano-php": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
