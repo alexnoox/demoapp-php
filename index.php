@@ -48,9 +48,7 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
                         <?= $_SESSION["lastName"] ?>
                     </h4>
                     <br/>
-                    <p>
-                        You logged in via group <b><?= $_SESSION["groupName"] ?></b> on marketplace <b><?= $_SESSION["marketplace"] ?></b>
-                    </p>
+                    <p>You logged in via group <b><?= $_SESSION["groupName"] ?></b> on marketplace <b><?= $_SESSION["marketplace"] ?></b></p>
                 <?php else: ?>
                     <h3>Sandbox</h3>
                     Please go to <a href="http://sandbox.maestrano.com">http://sandbox.maestrano.com</a> to test this application.
