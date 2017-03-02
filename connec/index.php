@@ -2,12 +2,13 @@
 require_once '../init.php';
 session_start();
 
-$bills = [];
+$organizations = [];
 
 // Handle action when user is logged in
 if ($_SESSION["loggedIn"]) {
-    $marketplace = $_SESSION['marketplace'];
+
     $groupId = $_SESSION['groupId'];
+    $marketplace = $_SESSION['marketplace'];
 
     $mnoSession = new Maestrano_Sso_Session($marketplace, $_SESSION);
 
@@ -16,8 +17,12 @@ if ($_SESSION["loggedIn"]) {
         header('Location: ' . Maestrano::sso()->getInitPath());
     }
 
-    // Retrieve all bills related to the user group
-    $bills = Maestrano_Account_Bill::all(array('groupId' => $groupId));
+    // Create a connec! client
+    $client = Maestrano_Connec_Client::with($marketplace)->new($groupId);
+
+    # Fetch the organizations and decode them
+    $resp = $client->get('/organizations');
+    $organizations = json_decode($resp['body'], true)['organizations'];
 }
 ?>
 
@@ -52,28 +57,27 @@ if ($_SESSION["loggedIn"]) {
             <div class="span12" style="text-align: center;">
                 <? if (!$_SESSION["loggedIn"]) { ?>
                     <p class="text-error">
-                        You need to be logged in to see your Maestrano bills
+                        You need to be logged in to see your Connec! organisations
                     </p>
                 <? } else { ?>
-                    <p>Below are the bills related to the group: <?= $_SESSION["groupName"] ?></p>
+                    <p>Below are the <b>organizations</b> related to group: <b><?= $_SESSION["groupName"] ?></b></p>
+                    <p>Create new organisations in another app (eg. vTiger or Xero) to see them listed here.</p>
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>UID</th>
-                            <th>Description</th>
-                            <th>Price (cents)</th>
-                            <th>Currency</th>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Status</th>
                             <th>Created At</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <? foreach ($bills as $bill) { ?>
+                        <? foreach ($organizations as $org) { ?>
                             <tr>
-                                <td><?= $bill->getId() ?></td>
-                                <td><?= $bill->getDescription() ?></td>
-                                <td><?= $bill->getPriceCents() ?></td>
-                                <td><?= $bill->getCurrency() ?></td>
-                                <td><?= $bill->getCreatedAt()->format(DateTime::ISO8601) ?></td>
+                                <td><?= $org['code'] ?></td>
+                                <td><?= $org['name'] ?></td>
+                                <td><?= $org['status'] ?></td>
+                                <td><?= $org['created_at'] ?></td>
                             </tr>
                         <? } ?>
                         </tbody>

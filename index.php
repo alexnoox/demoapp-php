@@ -5,7 +5,7 @@ require_once 'init.php';
 // Handle action when user is logged in
 if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
     // Get the current session
-    $mnoSession = Maestrano_Sso_Session::with($_SESSION['marketplace'])->new($_SESSION);
+    $mnoSession = new Maestrano_Sso_Session($_SESSION['marketplace'], $_SESSION);
 
     // Check session validity and trigger SSO if not
     if (!$mnoSession->isValid()) {
@@ -32,6 +32,7 @@ if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']) {
                 <li><a href="/">Home</a></li>
                 <?php if (array_key_exists('loggedIn', $_SESSION) && $_SESSION['loggedIn']): ?>
                   <li><a href="/bills">Bills</a></li>
+                  <li><a href="/connec">Connec!</a></li>
                   <li><a href="/logout.php">Logout</a></li>
                 <?php endif ?>
             </ul>
